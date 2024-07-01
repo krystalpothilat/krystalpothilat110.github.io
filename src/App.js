@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import "./App.css";
 import Page from "./Page";
 import Navbar from "./Navbar";
+import Links from "./Links";
 
 import mePic from "./imgs/me2.jpg";
 import ga from "./imgs/ga-logo.png";
@@ -15,6 +16,7 @@ import email from "./imgs/email.png";
 import resume from "./imgs/resume.png";
 
 function App() {
+  const resumeurl = process.env.PUBLIC_URL + "KrystalPothilatResume.pdf";
 
   const profexpdata = [
     { id: "pe1", title: "Summer 2024", description: "Expanded payload configurations on the P3E.", date: "June 2023 - August 2023",
@@ -43,10 +45,25 @@ function App() {
     // skills: ["HTML", "CSS", "JavaScript"],
     // link: "https://github.com/krystalpothilat/fastfooddeals"},
     { id: "proj3", title: "TicTacToe", 
-    description: "Play Tic-Tac-Toe against an AI player!",
+    description: "Play Tic-Tac-Toe against an AI player",
     skills: ["Python"],
     link: "https://tictactoe-kp.vercel.app/",
     githublink: "https://github.com/krystalpothilat/tictactoe"},
+  ];
+
+const edskillsdata = 
+    {classes: ["Data Structures and Algorithms", "Embedded Systems", "Operating Systems", "Artifical Intelligence", "Databasee Systems"],
+    languages: ["C++", "XML", "JavaScript", "Python", "Java"],
+    tools: ["Qt-Creator", "ReactJS", "Node.js", "MongoDB", "DevTrack", "IBM DOORS", "Git", "GitHub"]};
+
+
+
+
+  const linksdata = [
+    {img: resume, url: resumeurl},
+    {img: email, url: '`mailto:${"krystalpothilat@gmail.com"}`'},
+    {img: linkedin, url: "https://www.linkedin.com/in/krystalpothilat"},
+    {img: github, url: "https://github.com/krystalpothilat"}
   ];
 
   const [raindrops, setRaindrops] = useState([]);
@@ -91,7 +108,6 @@ function App() {
     },5000);
   };
 
-  const resumeurl = process.env.PUBLIC_URL + "KrystalPothilatResume.pdf";
 
   return (
     <div>
@@ -116,25 +132,13 @@ function App() {
         <div className =  "content">
           <Navbar handleScrollToPage = {handleScrollToPage} startRainfall={startRainfall} isAnimationRunning={isAnimationRunning}/>
           <Page id = "home" img = {mePic} alt = "" about1 = "true" style={{ backgroundColor: "blue" }}></Page>
-          <Page id = "aboutme"  img = {banner} alt = "" section = "About Me" info = {profexpdata} logo = {ga} style={{ backgroundColor: "yellow" }}></Page>
-          <Page id = "profexp"  img = {banner} alt = "" section = "Industry Experience" info = {profexpdata} logo = {ga} style={{ backgroundColor: "yellow" }}></Page>
-          <Page id = "proj"  img = {banner} alt = "" section = "Projects" info = {projdata} style={{ backgroundColor: "pink" }}></Page>
-          <Page id = "leadership"  img = {banner} alt = "" section = "Leadership" info = {leadershipexpdata} logo = {winc} style={{ backgroundColor: "orange" }}></Page>
+          <Page id = "aboutme"  img = {banner} alt = "" section = "About Me" info = {profexpdata} ></Page>
+          <Page id = "edskills"  img = {banner} alt = "" section = "Education and Skills" info = {edskillsdata}></Page>
+          <Page id = "profexp"  img = {banner} alt = "" section = "Industry Experience" info = {profexpdata} logo = {ga} ></Page>
+          <Page id = "proj"  img = {banner} alt = "" section = "Projects" info = {projdata}></Page>
+          <Page id = "leadership"  img = {banner} alt = "" section = "Leadership" info = {leadershipexpdata} logo = {winc} ></Page>
         </div>
-        <div className = "links">
-          <a href={resumeurl} target="_blank" rel="noopener noreferrer">
-              <img src ={resume} alt = "" className="link-img"/>
-          </a>
-          <a href={`mailto:${"krystalpothilat@gmail.com"}`} target="_blank" rel="noopener noreferrer"  >
-              <img src ={email} alt = "" className="link-img"  />
-          </a>
-          <a href={"https://www.linkedin.com/in/krystalpothilat"} target="_blank" rel="noopener noreferrer">
-              <img src ={linkedin} alt = "" className="link-img" />
-          </a>
-          <a href={"https://github.com/krystalpothilat"} target="_blank" rel="noopener noreferrer">
-              <img src ={github} alt = "" className="link-img" />
-          </a>
-        </div>
+          <Links info = {linksdata}></Links>
       </div>
     </div>
 

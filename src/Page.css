@@ -278,3 +278,42 @@
 #infobulletpoints{
     margin: 0;
 }
+
+.edskills-container{
+    padding: 20px;
+    border: 2px solid #dfcebc;
+    margin: 30px;
+    border-radius: 15px;
+    text-align: left;
+    flex: 1;
+    /* /* max-height: 100%; */
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 200px;
+}
+
+
+.section-header{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+.edsec-header{
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.edskillsimg {
+    height: 100px;
+    widtH: 100px;
+}

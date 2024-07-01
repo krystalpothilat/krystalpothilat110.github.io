@@ -4,6 +4,8 @@ import leadership from "./imgs/leader2.png";
 import proj from "./imgs/folder.png";
 import home from "./imgs/home.png";
 import cookie from "./imgs/cookie2.png";
+import girl from "./imgs/girl.png";
+import edskills from "./imgs/edskills.png";
 
 const Navbar = ({ handleScrollToPage, startRainfall, isAnimationRunning }) => {
   const [expanded, setExpanded] = useState(false);
@@ -29,6 +31,14 @@ const Navbar = ({ handleScrollToPage, startRainfall, isAnimationRunning }) => {
             <img src={home} alt = "" className = "section-img"/>
             <span className="nav-text">Home</span>
         </div>
+        <div className="nav-item" onClick={() => handleScrollToPage("aboutme")}>
+            <img src={girl}className = "section-img"/>
+            <span className="nav-text">About Me</span>
+        </div>
+        <div className="nav-item" onClick={() => handleScrollToPage("edskills")}>
+            <img src={edskills} className = "section-img"/>
+            <span className="nav-text">Skills</span>
+        </div>
         <div className="nav-item" onClick={() => handleScrollToPage("profexp")}>
             <img src={profexp} alt = "" className = "section-img"/>
             <span className="nav-text">Experience</span>
@@ -45,14 +55,7 @@ const Navbar = ({ handleScrollToPage, startRainfall, isAnimationRunning }) => {
           <img src = {cookie} alt = "" className = "section-img"/>
           <span className="nav-text">Try me!</span>
         </div>
-        {/* <div className="nav-item">
-            <img src={more}className = "section-img"/>
-            <span className="nav-text">About Me</span>
-        </div>
-        <div className="nav-item">
-            <img src={contact} className = "section-img"/>
-            <span className="nav-text">Contact</span>
-        </div> */}
+        
     </div>
   );
 };

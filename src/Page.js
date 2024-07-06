@@ -141,18 +141,15 @@ function Page({ id, img, about1, section, info, logo}) {
                                 <div className = "sec-header">
                                     <h2 className = "title"> {item.title}</h2>
                                     <div className = "projectlinks">
-
                                     {item.id.startsWith("proj") && (
                                         <a href={item.githublink} target="_blank" rel="noopener noreferrer" style={{ marginLeft: 'auto' }}>
                                             <img src ={githubtab} alt = "" className="link" />
                                         </a>
-
                                     )}
                                     {item.id.startsWith("proj") && (
                                         <a href={item.link} target="_blank" rel="noopener noreferrer" style={{ marginLeft: 'auto' }}>
                                             <img src ={externtab} alt = "" className="link" />
                                         </a>
-
                                     )}
                                     </div>
                                 </div>
@@ -177,7 +174,6 @@ function Page({ id, img, about1, section, info, logo}) {
                         ))}
                     </div>
                     </>
-
                 )}
                 
             </div>

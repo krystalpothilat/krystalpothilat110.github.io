@@ -31,7 +31,7 @@ function App() {
     { id: "leader1", title: "President", description: "Led the largest computer science student organization on campus empowering women in tech.", date: "March 2022 - March 2023",
       bulletpoints: ["Achieved expansion of member turn-out at in-person events by 150% through successful marketing and community cultivation", "Increased organization funds by 50% during the 5th annual BCOE Match Challenge", "Demonstrated exceptional leadership by overseeing and supporting officers and in-person events, providing guidance, and exemplifying a commitment to high-excellence"]},
     { id: "leader2", title: "Secretary", description: "Main support for the organization's  infrastructure and both internal/external communication.", date: "March 2021 - March 2022",
-      bulletpoints: ["Effectively facilitated communication and collaboration with various stakeholders, such as other student organizations, professors, industry professionals, and faculty members", "Orchestrated the planning, organization, and hosting of 4 impactful technical workshops and panels with experienced industry professionals, providing valuable learning opportunities for undergraduate students", "Developed and honed essential skills in public speaking, event planning, and teamwor"]
+      bulletpoints: ["Effectively facilitated communication and collaboration with various stakeholders, such as other student organizations, professors, industry professionals, and faculty members", "Orchestrated the planning, organization, and hosting of 4 impactful technical workshops and panels with experienced industry professionals, providing valuable learning opportunities for undergraduate students", "Developed and honed essential skills in public speaking, event planning, and teamwork"]
     }  ];
 
   const projdata = [
@@ -52,11 +52,9 @@ function App() {
   ];
 
 const edskillsdata = 
-    {classes: ["Data Structures and Algorithms", "Embedded Systems", "Operating Systems", "Artifical Intelligence", "Databasee Systems"],
-    languages: ["C++", "XML", "JavaScript", "Python", "Java"],
+    {classes: ["Data Structures and Algorithms", "Embedded Systems", "Operating Systems", "Artifical Intelligence", "Database Systems"],
+    languages: ["C++", "JavaScript", "Python", "Java", "XML"],
     tools: ["Qt-Creator", "ReactJS", "Node.js", "MongoDB", "DevTrack", "IBM DOORS", "Git", "GitHub"]};
-
-
 
 
   const linksdata = [
@@ -65,6 +63,10 @@ const edskillsdata =
     {img: linkedin, url: "https://www.linkedin.com/in/krystalpothilat"},
     {img: github, url: "https://github.com/krystalpothilat"}
   ];
+
+  const aboutmedesc={
+    descriptions: ["I am a First-Generation Student with a Bachelor's of Science in Computer Science from the University of California, Riverside. I am experienced in C++ and Javascript.", "I am interested in both fullstack and backend development. My interest lies in both the holistic perspective of projects and also the innerworkings.", "My career goal is to work for a company that pushes a tech product that I myself am a user of and stand behind. An example of a company I hope to work for one day is Notion."]
+  };
 
   const [raindrops, setRaindrops] = useState([]);
   const [isAnimationRunning, setIsAnimationRunning] = useState(false);
@@ -132,7 +134,7 @@ const edskillsdata =
         <div className =  "content">
           <Navbar handleScrollToPage = {handleScrollToPage} startRainfall={startRainfall} isAnimationRunning={isAnimationRunning}/>
           <Page id = "home" img = {mePic} alt = "" about1 = "true" style={{ backgroundColor: "blue" }}></Page>
-          <Page id = "aboutme"  img = {banner} alt = "" section = "About Me" info = {profexpdata} ></Page>
+          <Page id = "aboutme"  img = {banner} alt = "" section = "About Me" info = {aboutmedesc} ></Page>
           <Page id = "edskills"  img = {banner} alt = "" section = "Education and Skills" info = {edskillsdata}></Page>
           <Page id = "profexp"  img = {banner} alt = "" section = "Industry Experience" info = {profexpdata} logo = {ga} ></Page>
           <Page id = "proj"  img = {banner} alt = "" section = "Projects" info = {projdata}></Page>

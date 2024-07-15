@@ -32,11 +32,11 @@ const Navbar = ({ handleScrollToPage, startRainfall, isAnimationRunning }) => {
             <span className="nav-text">Home</span>
         </div>
         <div className="nav-item" onClick={() => handleScrollToPage("aboutme")}>
-            <img src={girl}className = "section-img"/>
+            <img src={girl} alt = "" className = "section-img"/>
             <span className="nav-text">About Me</span>
         </div>
         <div className="nav-item" onClick={() => handleScrollToPage("edskills")}>
-            <img src={edskills} className = "section-img"/>
+            <img src={edskills} alt = "" className = "section-img"/>
             <span className="nav-text">Skills</span>
         </div>
         <div className="nav-item" onClick={() => handleScrollToPage("profexp")}>

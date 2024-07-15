@@ -1,1 +1,0 @@
-https://krystalpothilat.github.io/

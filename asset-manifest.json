@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/krystalpothilat110.github.io/static/css/main.83479217.css",
-    "main.js": "/krystalpothilat110.github.io/static/js/main.44600595.js",
+    "main.js": "/krystalpothilat110.github.io/static/js/main.89ea0cb7.js",
     "static/js/453.253ccfac.chunk.js": "/krystalpothilat110.github.io/static/js/453.253ccfac.chunk.js",
     "static/media/me2.jpg": "/krystalpothilat110.github.io/static/media/me2.ba084d24c58c183834e2.jpg",
     "static/media/winc-logo.png": "/krystalpothilat110.github.io/static/media/winc-logo.ff735c3fe3c1bfa1e0c8.png",
@@ -13,11 +13,11 @@
     "static/media/home.png": "/krystalpothilat110.github.io/static/media/home.6528278e0cec015a4270.png",
     "index.html": "/krystalpothilat110.github.io/index.html",
     "main.83479217.css.map": "/krystalpothilat110.github.io/static/css/main.83479217.css.map",
-    "main.44600595.js.map": "/krystalpothilat110.github.io/static/js/main.44600595.js.map",
+    "main.89ea0cb7.js.map": "/krystalpothilat110.github.io/static/js/main.89ea0cb7.js.map",
     "453.253ccfac.chunk.js.map": "/krystalpothilat110.github.io/static/js/453.253ccfac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83479217.css",
-    "static/js/main.44600595.js"
+    "static/js/main.89ea0cb7.js"
   ]
 }
